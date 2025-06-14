@@ -23,7 +23,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
-            You're already brilliant. You just need the powerful self-discovery and accountability partnership to transform your potential into promotions, influence, and the career breakthrough you deserve. No more second-guessing, no more waiting for the "perfect moment."
+            Transform your potential into promotions and influence through powerful self-discovery and accountability partnership. No more second-guessing.
           </p>
           
           <div className="flex justify-center animate-fade-in-up">
