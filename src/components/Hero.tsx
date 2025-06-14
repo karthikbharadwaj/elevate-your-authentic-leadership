@@ -26,7 +26,7 @@ export const Hero = () => {
             You're already brilliant. You just need the powerful self-discovery and accountability partnership to transform your potential into promotions, influence, and the career breakthrough you deserve. No more second-guessing, no more waiting for the "perfect moment."
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up">
+          <div className="flex justify-center animate-fade-in-up">
             <Button 
               size="lg" 
               className="golden-button px-8 py-4 text-lg font-semibold rounded-full group"
@@ -34,14 +34,6 @@ export const Hero = () => {
             >
               Yes, I'm Ready to Be an Authentic Leader
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold rounded-full border-2 border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black transition-all duration-300"
-              onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
-            >
-              Claim Your Free Strategy Session
             </Button>
           </div>
           
