@@ -6,36 +6,36 @@ const services = [
   {
     icon: Target,
     title: "Purpose",
-    description: "Gain clarity in complex situations and make confident decisions without second-guessing yourself.",
-    features: ["Strategic decision-making", "Career clarity & direction", "Confident leadership choices"]
+    description: "Finally gain crystal-clear clarity in complex situations and make confident decisions without the exhausting second-guessing that's been holding you back.",
+    features: ["Decisive leadership under pressure", "Unshakeable career direction", "Confident choices that accelerate results"]
   },
   {
     icon: Zap,
     title: "Presence",
-    description: "Develop the leadership presence, influence, and communication skills to thrive in high-pressure situations.",
-    features: ["Executive presence", "Influential communication", "Leadership confidence"]
+    description: "Develop the magnetic leadership presence and influential communication that commands respect and opens doors to executive opportunities.",
+    features: ["Executive presence that gets noticed", "Influence that drives results", "Confidence that inspires teams"]
   },
   {
     icon: Users,
     title: "People",
-    description: "Master navigating organizational politics, influence, and work-life balance while leading effectively.",
-    features: ["Team leadership", "Organizational politics", "Work-life integration"]
+    description: "Master the art of navigating organizational politics and leading teams while maintaining the work-life balance you've been sacrificing for too long.",
+    features: ["Effortless team leadership", "Political savvy that protects your interests", "Sustainable success without burnout"]
   },
   {
     icon: TrendingUp,
     title: "Progress",
-    description: "Understand and plan your next career step with sustainable success strategies that control the pace.",
-    features: ["Career acceleration", "Promotion readiness", "Sustainable growth"]
+    description: "Create your personalized roadmap to the next level with proven strategies that put you in control of your career trajectory and promotion timeline.",
+    features: ["Accelerated career advancement", "Promotion-ready positioning", "Sustainable growth you can control"]
   }
 ];
 
 const challenges = [
-  "Feel stuck or uncertain about their next career move",
-  "Are dealing with conflict, high-pressure decisions, or team challenges",
-  "Struggling to navigate organizational politics",
-  "Lack clarity and a roadmap for the next chapter of their career",
-  "Have an inner critic that's using up too much mental energy",
-  "Want to strengthen their confidence, communication, and leadership presence"
+  "Feel stuck watching others get promoted while you're passed over despite your technical brilliance?",
+  "Lie awake at night stressed about high-pressure decisions and team conflicts that seem impossible to navigate?",
+  "Feel frustrated by organizational politics that seem designed to keep you from advancing?",
+  "Know you're capable of more but lack the clear roadmap to get there?",
+  "Have that nagging inner voice convincing you that you're not ready for the next level?",
+  "Want to lead with confidence but feel like you're missing the executive presence others seem to have naturally?"
 ];
 
 export const Services = () => {
@@ -45,8 +45,11 @@ export const Services = () => {
         {/* Challenge Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Are You a Tech Leader Who...
+            Are You Tired of Being the Best-Kept Secret in Your Organization?
           </h2>
+          <p className="text-xl text-[var(--text-color)] max-w-4xl mx-auto mb-8">
+            You're brilliant. Your technical skills are undeniable. But somehow, you're still stuck watching others advance while you wonder what you're missing. Sound familiar?
+          </p>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-4 text-left">
               {challenges.map((challenge, index) => (
@@ -57,15 +60,20 @@ export const Services = () => {
               ))}
             </div>
           </div>
+          <div className="mt-8 p-6 glass-card rounded-xl max-w-4xl mx-auto">
+            <p className="text-xl text-[var(--text-color)] font-semibold">
+              If you nodded "yes" to any of these, you're not alone. And more importantly, <span className="gradient-text">you're exactly where I can help.</span>
+            </p>
+          </div>
         </div>
 
         {/* 4P Program Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            The 4P Leadership Compass Program
+            The 4P Leadership Compass: Your Blueprint to Executive Success
           </h2>
           <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto mb-8">
-            A 3-month intensive program that expands your leadership across four critical dimensions
+            Stop leaving your career to chance. In just 3 months, you'll master the four pillars that separate good managers from executive leaders who get promoted, respected, and rewarded.
           </p>
         </div>
         
@@ -102,23 +110,28 @@ export const Services = () => {
 
         {/* Results Section */}
         <div className="glass-card p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold gradient-text mb-6">What My Clients Achieve</h3>
+          <h3 className="text-2xl font-bold gradient-text mb-6">The Transformation My Clients Experience</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="space-y-2">
               <div className="text-3xl">⚡</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Faster Decision-Making</h4>
-              <p className="text-[var(--text-color-secondary)]">Clear, confident choices in high-pressure situations</p>
+              <h4 className="font-semibold text-[var(--text-color)]">Lightning-Fast Decision Making</h4>
+              <p className="text-[var(--text-color-secondary)]">No more analysis paralysis - make confident choices that accelerate results</p>
             </div>
             <div className="space-y-2">
               <div className="text-3xl">🎯</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Stronger Leadership Presence</h4>
-              <p className="text-[var(--text-color-secondary)]">Increased influence in critical conversations</p>
+              <h4 className="font-semibold text-[var(--text-color)]">Magnetic Executive Presence</h4>
+              <p className="text-[var(--text-color-secondary)]">Command respect and influence in every room you enter</p>
             </div>
             <div className="space-y-2">
               <div className="text-3xl">🚀</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Sustainable Career Success</h4>
-              <p className="text-[var(--text-color-secondary)]">Growth without stress, controlling your pace</p>
+              <h4 className="font-semibold text-[var(--text-color)]">Promotion-Ready Positioning</h4>
+              <p className="text-[var(--text-color-secondary)]">Strategic career advancement on your timeline, not theirs</p>
             </div>
+          </div>
+          <div className="mt-8 p-6 bg-gradient-to-r from-[var(--primary-color)]/10 to-[var(--primary-light)]/10 rounded-xl">
+            <p className="text-lg text-[var(--text-color)] font-medium">
+              <strong>Here's what I promise:</strong> In 90 days, you'll either have the promotion conversation you've been avoiding, or you'll have the unshakeable confidence to demand the recognition you deserve. <em>That's not just a goal—it's your new reality.</em>
+            </p>
           </div>
         </div>
       </div>

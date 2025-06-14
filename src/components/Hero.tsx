@@ -15,15 +15,15 @@ export const Hero = () => {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
             ))}
-            <span className="ml-2 text-[var(--text-color-secondary)] font-medium">Trusted by Tech Leaders for 15+ Years</span>
+            <span className="ml-2 text-[var(--text-color-secondary)] font-medium">Trusted by Tech Leaders Who've Achieved Results</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight gradient-text animate-fade-in-up">
-            Accelerate Your Tech Leadership Career
+            Stop Waiting for "Someday" - Accelerate Your Tech Leadership Career <em>Now</em>
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
-            Executive coaching for ambitious tech leaders ready to gain career clarity, build confidence, and leverage executive presence to get those exciting promotions faster.
+            You're already brilliant. You just need the proven system to transform your potential into promotions, influence, and the career breakthrough you deserve. No more second-guessing, no more waiting for the "perfect moment."
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up">
@@ -31,7 +31,7 @@ export const Hero = () => {
               size="lg" 
               className="golden-button px-8 py-4 text-lg font-semibold rounded-full group"
             >
-              Start Your 4P Leadership Journey
+              Yes, I'm Ready to Lead with Confidence
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -39,13 +39,13 @@ export const Hero = () => {
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-full border-2 border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black transition-all duration-300"
             >
-              Book Free Consultation
+              Claim Your Free Strategy Session
             </Button>
           </div>
           
           {/* Social proof */}
           <div className="mt-16 pt-8 border-t border-[var(--primary-color)]/20 animate-fade-in">
-            <p className="text-[var(--text-color-secondary)] mb-6">Trusted by tech leaders at</p>
+            <p className="text-[var(--text-color-secondary)] mb-6">Join tech leaders who've accelerated their careers at</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Microsoft</div>
               <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Google</div>
