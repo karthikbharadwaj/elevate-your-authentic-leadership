@@ -1,7 +1,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Upload, Camera } from "lucide-react";
+import { Camera } from "lucide-react";
 import { pipeline, env } from '@huggingface/transformers';
 
 // Configure transformers.js
@@ -116,9 +116,8 @@ const loadImage = (file: Blob): Promise<HTMLImageElement> => {
 };
 
 export const AboutCoach = () => {
-  const [profileImage, setProfileImage] = useState("/lovable-uploads/d57d57e5-7676-46fa-9888-c59301e86601.png");
+  const [profileImage, setProfileImage] = useState("/lovable-uploads/97decb62-39b8-4040-ac31-49f93fcaaaa8.png");
   const [isProcessing, setIsProcessing] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     // Process the default image on component mount
@@ -128,7 +127,7 @@ export const AboutCoach = () => {
   const processDefaultImage = async () => {
     try {
       setIsProcessing(true);
-      const response = await fetch("/lovable-uploads/d57d57e5-7676-46fa-9888-c59301e86601.png");
+      const response = await fetch("/lovable-uploads/97decb62-39b8-4040-ac31-49f93fcaaaa8.png");
       const blob = await response.blob();
       const img = await loadImage(blob);
       const processedBlob = await removeBackground(img);
@@ -136,26 +135,6 @@ export const AboutCoach = () => {
       setProfileImage(processedUrl);
     } catch (error) {
       console.error('Error processing default image:', error);
-    } finally {
-      setIsProcessing(false);
-    }
-  };
-
-  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    try {
-      setIsProcessing(true);
-      const img = await loadImage(file);
-      const processedBlob = await removeBackground(img);
-      const processedUrl = URL.createObjectURL(processedBlob);
-      setProfileImage(processedUrl);
-    } catch (error) {
-      console.error('Error processing uploaded image:', error);
-      // Fallback to original image if processing fails
-      const originalUrl = URL.createObjectURL(file);
-      setProfileImage(originalUrl);
     } finally {
       setIsProcessing(false);
     }
@@ -192,36 +171,6 @@ export const AboutCoach = () => {
                     />
                   )}
                 </div>
-                
-                {/* Upload Button */}
-                <Button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="absolute bottom-4 right-4 golden-button p-3 rounded-full"
-                  size="sm"
-                  disabled={isProcessing}
-                >
-                  <Camera className="w-4 h-4" />
-                </Button>
-                
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  className="hidden"
-                />
-              </div>
-              
-              <div className="mt-8">
-                <Button
-                  onClick={() => fileInputRef.current?.click()}
-                  variant="outline"
-                  className="border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black"
-                  disabled={isProcessing}
-                >
-                  <Upload className="w-4 h-4 mr-2" />
-                  {isProcessing ? "Processing..." : "Replace Photo"}
-                </Button>
               </div>
             </div>
 
