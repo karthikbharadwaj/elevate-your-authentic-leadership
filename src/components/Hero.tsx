@@ -19,7 +19,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight gradient-text animate-fade-in-up">
-            Stop Waiting for "Someday" - Accelerate Your Tech Leadership Career <em>Now</em>
+            Transform Your Brilliance Into Executive Presence, Crystal-Clear Decisions, and the Confident Leadership That Commands Promotions
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
