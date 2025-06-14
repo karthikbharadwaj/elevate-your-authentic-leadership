@@ -130,7 +130,7 @@ export const Services = () => {
           </div>
           <div className="mt-8 p-6 bg-gradient-to-r from-[var(--primary-color)]/10 to-[var(--primary-light)]/10 rounded-xl">
             <p className="text-lg text-[var(--text-color)] font-medium">
-              <strong>Here's what I promise:</strong> In 90 days, you'll either have the promotion conversation you've been avoiding, or you'll have the unshakeable confidence to demand the recognition you deserve. <em>That's not just a goal—it's your new reality.</em>
+              <strong>Imagine this:</strong> In just 90 days, you'll either be confidently leading the promotion conversation you've been putting off, or you'll possess the unwavering self-assurance to demand the recognition you deserve. <em>This isn't just a promise; it's your guaranteed path to a new reality.</em>
             </p>
           </div>
         </div>
