@@ -168,7 +168,7 @@ export const AboutCoach = () => {
                     <img
                       src={profileImage}
                       alt="Executive Coach"
-                      className="w-full h-full object-cover object-center scale-125"
+                      className="w-full h-full object-cover object-center"
                     />
                   )}
                 </div>
