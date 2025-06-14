@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
 import { pipeline, env } from '@huggingface/transformers';
+import { Card, CardContent } from "@/components/ui/card";
 
 // Configure transformers.js
 env.allowLocalModels = false;
@@ -187,6 +188,52 @@ export const AboutCoach = () => {
               <p>
                 But it also means overcoming self-doubt, imposter syndrome, and anything else getting in the way that you might not even see.
               </p>
+              
+              <Card className="glass-card border-0 relative overflow-hidden">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold gradient-text mb-6">
+                    Why Leaders Choose to Work With Me
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-[var(--primary-color)] rounded-full mr-4 mt-1 flex items-center justify-center">
+                        <span className="text-black font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-[var(--text-color)]">15+ Years in the Trenches</div>
+                        <div className="text-[var(--text-color-secondary)]">I've built high-performance tech teams and navigated every challenge you're facing</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-[var(--primary-color)] rounded-full mr-4 mt-1 flex items-center justify-center">
+                        <span className="text-black font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-[var(--text-color)]">Proven Results</div>
+                        <div className="text-[var(--text-color-secondary)]">My clients get promoted faster and lead with confidence</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-[var(--primary-color)] rounded-full mr-4 mt-1 flex items-center justify-center">
+                        <span className="text-black font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-[var(--text-color)]">AI & Tech Expertise</div>
+                        <div className="text-[var(--text-color-secondary)]">I understand the unique challenges of tech leadership in an AI-driven world</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-[var(--primary-color)] rounded-full mr-4 mt-1 flex items-center justify-center">
+                        <span className="text-black font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <div className="font-medium text-[var(--text-color)]">Personal Attention</div>
+                        <div className="text-[var(--text-color-secondary)]">You work directly with me - no junior coaches or generic programs</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
               
               <div className="mt-8">
                 <p className="text-xl font-semibold gradient-text">
