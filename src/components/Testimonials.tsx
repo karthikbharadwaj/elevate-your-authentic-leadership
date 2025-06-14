@@ -1,6 +1,5 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -64,12 +63,6 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="glass-card border-0 hover-lift relative overflow-hidden">
               <CardContent className="p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                
                 <Quote className="w-8 h-8 text-[var(--primary-color)] mb-4 opacity-50" />
                 
                 <blockquote className="text-[var(--text-color)] mb-6 leading-relaxed">
