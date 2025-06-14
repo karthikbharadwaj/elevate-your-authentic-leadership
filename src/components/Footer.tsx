@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="hero-section py-16 border-t border-[var(--primary-color)]/20">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4 gradient-text">Leadership Excellence</h3>
@@ -24,18 +24,6 @@ export const Footer = () => {
                 <Mail className="w-5 h-5 text-[var(--primary-color)] hover:text-black" />
               </div>
             </div>
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-[var(--text-color)]">Services</h4>
-            <ul className="space-y-2 text-[var(--text-color-secondary)]">
-              <li className="hover:text-[var(--primary-color)] transition-colors cursor-pointer">Executive Coaching</li>
-              <li className="hover:text-[var(--primary-color)] transition-colors cursor-pointer">Leadership Development</li>
-              <li className="hover:text-[var(--primary-color)] transition-colors cursor-pointer">Team Transformation</li>
-              <li className="hover:text-[var(--primary-color)] transition-colors cursor-pointer">Performance Coaching</li>
-              <li className="hover:text-[var(--primary-color)] transition-colors cursor-pointer">Strategic Thinking</li>
-            </ul>
           </div>
           
           {/* Contact */}
