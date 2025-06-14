@@ -1,41 +1,9 @@
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Calendar } from "lucide-react";
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+import { Calendar } from "lucide-react";
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Your Strategy Session is Reserved!",
-      description: "I'll personally reach out within 24 hours to schedule your breakthrough session.",
-    });
-    setFormData({ name: '', email: '', company: '', message: '' });
-    // Redirect to Calendly after form submission
-    setTimeout(() => {
-      window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank');
-    }, 1000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
   return (
     <section className="py-24 hero-section">
       <div className="container mx-auto px-6">
@@ -54,103 +22,28 @@ export const Contact = () => {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fade-in-up">
-          {/* Contact Form */}
+          {/* Direct Calendly Section */}
           <Card className="glass-card border-0 relative overflow-hidden">
             <CardHeader>
               <CardTitle className="text-2xl font-bold gradient-text">
-                Reserve Your Strategy Session
+                Book Your Strategy Session
               </CardTitle>
               <p className="text-[var(--text-color-secondary)]">
                 In 30 minutes, we'll identify your biggest leadership obstacles and create a clear action plan for your next promotion.
               </p>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
-                      Full Name *
-                    </label>
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
-                      Email Address *
-                    </label>
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
-                    Company / Organization
-                  </label>
-                  <Input
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
-                    placeholder="Your company name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
-                    What's your biggest leadership challenge right now? *
-                  </label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
-                    placeholder="I'm struggling with... / I want to achieve... / My biggest frustration is..."
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="golden-button w-full py-4 rounded-full font-semibold"
-                >
-                  Reserve My Strategy Session Now
-                </Button>
-                <p className="text-sm text-[var(--text-color-secondary)] text-center">
-                  Limited spots available. I personally conduct every session.
-                </p>
-              </form>
-              
-              {/* Direct Calendly Link */}
-              <div className="mt-6 pt-6 border-t border-[var(--primary-color)]/20">
-                <p className="text-center text-[var(--text-color-secondary)] mb-4">
-                  Or book directly:
-                </p>
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="w-full py-4 rounded-full font-semibold border-2 border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black transition-all duration-300"
-                  onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
-                >
-                  <Calendar className="mr-2 w-5 h-5" />
-                  Book Your Call Instantly
-                </Button>
-              </div>
+              <Button 
+                size="lg"
+                className="golden-button w-full py-4 rounded-full font-semibold mb-4"
+                onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
+              >
+                <Calendar className="mr-2 w-5 h-5" />
+                Book Your Call Instantly
+              </Button>
+              <p className="text-sm text-[var(--text-color-secondary)] text-center">
+                Limited spots available. I personally conduct every session.
+              </p>
             </CardContent>
           </Card>
           
