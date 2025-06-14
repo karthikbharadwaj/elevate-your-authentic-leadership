@@ -38,6 +38,12 @@ const testimonials = [
     role: "Head of Product, Enterprise Corp",
     content: "The program gave me a clear roadmap for my next career step. I learned to control the pace of my growth while maintaining work-life balance. Highly recommend!",
     rating: 5
+  },
+  {
+    name: "A. G.",
+    role: "Tech Professional",
+    content: "I had the privilege of working with Karthik during a one-hour coaching session in the Himalayas—a setting as grounding as the experience itself. In that brief yet powerful time, he helped me navigate a grief I hadn’t fully acknowledged. What stood out most was Karthik’s deep presence and compassionate approach. He gently guided me to stop minimizing my emotions or comparing them to others' experiences, reminding me that grief is not something to be ranked or rationalized—it's something to be honored. That session gave me clarity, emotional permission, and a sense of peace that I hadn’t been able to access on my own. If you're seeking a coach who can create a safe space, meet you where you are, and help you reconnect with your emotional truth, I wholeheartedly recommend Karthik.",
+    rating: 5
   }
 ];
 
