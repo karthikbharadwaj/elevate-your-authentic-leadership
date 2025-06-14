@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
@@ -189,25 +188,6 @@ export const AboutCoach = () => {
                 But it also means overcoming self-doubt, imposter syndrome, and anything else getting in the way that you might not even see.
               </p>
               
-              <div className="mt-8 p-6 glass-card rounded-xl">
-                <h3 className="text-2xl font-bold gradient-text mb-4">My Clients Are:</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Ambitious technology leaders feeling stuck or uncertain about their next career move",
-                    "Dealing with conflict, high-pressure decisions, or team challenges",
-                    "Struggling to navigate organizational politics",
-                    "Lacking clarity and a roadmap for their career's next chapter",
-                    "Having an inner critic that's using up too much mental energy",
-                    "Wanting to strengthen confidence, communication, and leadership presence"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-[var(--primary-color)] font-bold mt-1">→</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
               <div className="mt-8">
                 <p className="text-xl font-semibold gradient-text">
                   That's where I come in.
