@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
@@ -25,10 +26,10 @@ export const Contact = () => {
           <Card className="glass-card border-0 relative overflow-hidden">
             <CardHeader>
               <CardTitle className="text-2xl font-bold gradient-text">
-                Book Your Strategy Session
+                Ready for Your Promotion? Start Here.
               </CardTitle>
               <p className="text-[var(--text-color-secondary)]">
-                In 30 minutes, we'll identify your biggest leadership obstacles and create a clear action plan for your next promotion.
+                In a focused 30-minute strategy call, we'll diagnose what's holding you back and build a concrete action plan to secure your next leadership role.
               </p>
             </CardHeader>
             <CardContent>
