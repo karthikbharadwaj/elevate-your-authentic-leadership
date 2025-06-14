@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -57,7 +58,7 @@ export const Contact = () => {
           <Card className="glass-card border-0 relative overflow-hidden">
             <CardHeader>
               <CardTitle className="text-2xl font-bold gradient-text">
-                Claim Your FREE Strategy Session (Value: $500)
+                Reserve Your Strategy Session
               </CardTitle>
               <p className="text-[var(--text-color-secondary)]">
                 In 30 minutes, we'll identify your biggest leadership obstacles and create a clear action plan for your next promotion.
@@ -128,7 +129,7 @@ export const Contact = () => {
                   size="lg" 
                   className="golden-button w-full py-4 rounded-full font-semibold"
                 >
-                  Reserve My FREE Strategy Session Now
+                  Reserve My Strategy Session Now
                 </Button>
                 <p className="text-sm text-[var(--text-color-secondary)] text-center">
                   Limited spots available. I personally conduct every session.
