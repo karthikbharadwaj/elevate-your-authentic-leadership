@@ -1,4 +1,3 @@
-
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, Linkedin, Twitter } from "lucide-react";
 
@@ -6,9 +5,9 @@ export const Footer = () => {
   return (
     <footer className="hero-section py-16 border-t border-[var(--primary-color)]/20">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="mb-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div>
             <h3 className="text-2xl font-bold mb-4 gradient-text">Leadership Excellence</h3>
             <p className="text-[var(--text-color-secondary)] mb-6 max-w-md">
               Empowering leaders to unlock their potential and drive meaningful change in their organizations through proven coaching methodologies.
@@ -22,21 +21,6 @@ export const Footer = () => {
               </div>
               <div className="p-2 glass-card rounded-full hover:bg-[var(--primary-color)] transition-colors cursor-pointer">
                 <Mail className="w-5 h-5 text-[var(--primary-color)] hover:text-black" />
-              </div>
-            </div>
-          </div>
-          
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-[var(--text-color)]">Contact</h4>
-            <div className="space-y-3 text-[var(--text-color-secondary)]">
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>coach@leadership.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
               </div>
             </div>
           </div>
