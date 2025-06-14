@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,6 +22,10 @@ export const Contact = () => {
       description: "I'll personally reach out within 24 hours to schedule your breakthrough session.",
     });
     setFormData({ name: '', email: '', company: '', message: '' });
+    // Redirect to Calendly after form submission
+    setTimeout(() => {
+      window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank');
+    }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -131,6 +134,22 @@ export const Contact = () => {
                   Limited spots available. I personally conduct every session.
                 </p>
               </form>
+              
+              {/* Direct Calendly Link */}
+              <div className="mt-6 pt-6 border-t border-[var(--primary-color)]/20">
+                <p className="text-center text-[var(--text-color-secondary)] mb-4">
+                  Or book directly:
+                </p>
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="w-full py-4 rounded-full font-semibold border-2 border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black transition-all duration-300"
+                  onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
+                >
+                  <Calendar className="mr-2 w-5 h-5" />
+                  Book Your Call Instantly
+                </Button>
+              </div>
             </CardContent>
           </Card>
           
@@ -199,6 +218,7 @@ export const Contact = () => {
                   variant="secondary" 
                   size="lg"
                   className="w-full bg-black text-white hover:bg-gray-800 font-semibold"
+                  onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
                 >
                   Yes, I'm Ready to Transform My Leadership
                 </Button>

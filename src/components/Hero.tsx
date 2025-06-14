@@ -30,6 +30,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="golden-button px-8 py-4 text-lg font-semibold rounded-full group"
+              onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
             >
               Yes, I'm Ready to Lead with Confidence
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -38,6 +39,7 @@ export const Hero = () => {
               variant="outline" 
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-full border-2 border-[var(--primary-color)] text-[var(--text-color)] hover:bg-[var(--primary-color)] hover:text-black transition-all duration-300"
+              onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
             >
               Claim Your Free Strategy Session
             </Button>
