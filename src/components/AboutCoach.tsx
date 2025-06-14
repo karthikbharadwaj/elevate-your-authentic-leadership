@@ -1,5 +1,5 @@
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
 import { pipeline, env } from '@huggingface/transformers';
@@ -36,9 +36,9 @@ function resizeImageIfNeeded(canvas: HTMLCanvasElement, ctx: CanvasRenderingCont
   return false;
 }
 
-const removeBackground = async (imageElement: HTMLImageElement): Promise<Blob> => {
+const blurBackgroundImage = async (imageElement: HTMLImageElement): Promise<Blob> => {
   try {
-    console.log('Starting background removal process...');
+    console.log('Starting background blur process...');
     const segmenter = await pipeline('image-segmentation', 'Xenova/segformer-b0-finetuned-ade-512-512', {
       device: 'webgpu',
     });
@@ -59,33 +59,51 @@ const removeBackground = async (imageElement: HTMLImageElement): Promise<Blob> =
     
     console.log('Segmentation result:', result);
     
-    if (!result || !Array.isArray(result) || result.length === 0 || !result[0].mask) {
+    if (!result || !Array.isArray(result) || result.length === 0) {
       throw new Error('Invalid segmentation result');
     }
+
+    const personResult = result.find(item => item.label === 'person');
+    let mask;
+    if (personResult && personResult.mask) {
+        console.log("Found 'person' mask.");
+        mask = personResult.mask;
+    } else {
+        console.warn("No 'person' found in segmentation. Falling back to the first mask.");
+        if (!result[0].mask) throw new Error('Invalid segmentation result');
+        mask = result[0].mask;
+    }
     
+    const foregroundCanvas = document.createElement('canvas');
+    foregroundCanvas.width = canvas.width;
+    foregroundCanvas.height = canvas.height;
+    const foregroundCtx = foregroundCanvas.getContext('2d');
+    if (!foregroundCtx) throw new Error('Could not get foreground canvas context');
+    
+    foregroundCtx.drawImage(canvas, 0, 0);
+    const foregroundImageData = foregroundCtx.getImageData(0, 0, foregroundCanvas.width, foregroundCanvas.height);
+    const data = foregroundImageData.data;
+    
+    for (let i = 0; i < mask.data.length; i++) {
+        const alpha = Math.round(mask.data[i] * 255);
+        data[i * 4 + 3] = alpha;
+    }
+    foregroundCtx.putImageData(foregroundImageData, 0, 0);
+    console.log('Foreground mask applied.');
+
     const outputCanvas = document.createElement('canvas');
     outputCanvas.width = canvas.width;
     outputCanvas.height = canvas.height;
     const outputCtx = outputCanvas.getContext('2d');
-    
     if (!outputCtx) throw new Error('Could not get output canvas context');
+
+    outputCtx.filter = 'blur(8px)';
+    outputCtx.drawImage(canvas, 0, 0, canvas.width, canvas.height);
+    outputCtx.filter = 'none';
+    console.log('Background blurred.');
     
-    outputCtx.drawImage(canvas, 0, 0);
-    
-    const outputImageData = outputCtx.getImageData(
-      0, 0,
-      outputCanvas.width,
-      outputCanvas.height
-    );
-    const data = outputImageData.data;
-    
-    for (let i = 0; i < result[0].mask.data.length; i++) {
-      const alpha = Math.round((1 - result[0].mask.data[i]) * 255);
-      data[i * 4 + 3] = alpha;
-    }
-    
-    outputCtx.putImageData(outputImageData, 0, 0);
-    console.log('Mask applied successfully');
+    outputCtx.drawImage(foregroundCanvas, 0, 0);
+    console.log('Foreground composited on blurred background.');
     
     return new Promise((resolve, reject) => {
       outputCanvas.toBlob(
@@ -102,7 +120,7 @@ const removeBackground = async (imageElement: HTMLImageElement): Promise<Blob> =
       );
     });
   } catch (error) {
-    console.error('Error removing background:', error);
+    console.error('Error blurring background:', error);
     throw error;
   }
 };
@@ -117,7 +135,7 @@ const loadImage = (file: Blob): Promise<HTMLImageElement> => {
 };
 
 export const AboutCoach = () => {
-  const [profileImage, setProfileImage] = useState("/lovable-uploads/fb32de5d-0034-4fb5-b4c1-e98a8c3fbf57.png");
+  const [profileImage, setProfileImage] = useState("/lovable-uploads/5ea169c6-734e-47da-a01b-71aa64c39afb.png");
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
@@ -128,10 +146,10 @@ export const AboutCoach = () => {
   const processDefaultImage = async () => {
     try {
       setIsProcessing(true);
-      const response = await fetch("/lovable-uploads/fb32de5d-0034-4fb5-b4c1-e98a8c3fbf57.png");
+      const response = await fetch("/lovable-uploads/5ea169c6-734e-47da-a01b-71aa64c39afb.png");
       const blob = await response.blob();
       const img = await loadImage(blob);
-      const processedBlob = await removeBackground(img);
+      const processedBlob = await blurBackgroundImage(img);
       const processedUrl = URL.createObjectURL(processedBlob);
       setProfileImage(processedUrl);
     } catch (error) {
@@ -161,7 +179,7 @@ export const AboutCoach = () => {
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--primary-color)]/20 to-[var(--primary-light)]/20">
                       <div className="text-center">
                         <div className="animate-spin w-12 h-12 border-4 border-[var(--primary-color)] border-t-transparent rounded-full mx-auto mb-4"></div>
-                        <p className="text-[var(--text-color-secondary)]">Processing image...</p>
+                        <p className="text-[var(--text-color-secondary)]">Blurring background...</p>
                       </div>
                     </div>
                   ) : (
