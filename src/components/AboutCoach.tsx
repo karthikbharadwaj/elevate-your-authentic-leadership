@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Camera } from "lucide-react";
@@ -116,7 +117,7 @@ const loadImage = (file: Blob): Promise<HTMLImageElement> => {
 };
 
 export const AboutCoach = () => {
-  const [profileImage, setProfileImage] = useState("/lovable-uploads/483eb0f3-d243-4982-8c79-742f857ff62d.png");
+  const [profileImage, setProfileImage] = useState("/lovable-uploads/fb32de5d-0034-4fb5-b4c1-e98a8c3fbf57.png");
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
@@ -127,7 +128,7 @@ export const AboutCoach = () => {
   const processDefaultImage = async () => {
     try {
       setIsProcessing(true);
-      const response = await fetch("/lovable-uploads/483eb0f3-d243-4982-8c79-742f857ff62d.png");
+      const response = await fetch("/lovable-uploads/fb32de5d-0034-4fb5-b4c1-e98a8c3fbf57.png");
       const blob = await response.blob();
       const img = await loadImage(blob);
       const processedBlob = await removeBackground(img);
