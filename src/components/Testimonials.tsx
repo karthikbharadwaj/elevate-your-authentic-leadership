@@ -1,6 +1,14 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -28,24 +36,44 @@ export const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto animate-fade-in-up">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="glass-card border-0 hover-lift relative overflow-hidden flex flex-col">
-              <CardContent className="p-8 flex flex-col flex-grow">
-                <Quote className="w-8 h-8 text-[var(--primary-color)] mb-4 opacity-50" />
-                
-                <blockquote className="text-[var(--text-color)] mb-6 leading-relaxed flex-grow">
-                  "{testimonial.content}"
-                </blockquote>
-                
-                <div className="border-t border-[var(--primary-color)]/20 pt-4 mt-auto">
-                  <div className="font-semibold text-[var(--text-color)]">{testimonial.name}</div>
-                  {testimonial.role && <div className="text-[var(--primary-color)] font-medium">{testimonial.role}</div>}
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 5000,
+              stopOnInteraction: true,
+            }),
+          ]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-4xl mx-auto animate-fade-in-up"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1 h-full">
+                  <Card className="glass-card border-0 hover-lift relative overflow-hidden flex flex-col h-full">
+                    <CardContent className="p-8 flex flex-col flex-grow">
+                      <Quote className="w-8 h-8 text-[var(--primary-color)] mb-4 opacity-50" />
+                      
+                      <blockquote className="text-[var(--text-color)] mb-6 leading-relaxed flex-grow">
+                        "{testimonial.content}"
+                      </blockquote>
+                      
+                      <div className="border-t border-[var(--primary-color)]/20 pt-4 mt-auto">
+                        <div className="font-semibold text-[var(--text-color)]">{testimonial.name}</div>
+                        {testimonial.role && <div className="text-[var(--primary-color)] font-medium">{testimonial.role}</div>}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
