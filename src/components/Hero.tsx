@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 
@@ -36,8 +37,20 @@ export const Hero = () => {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
+          
+          {/* Social proof */}
+          <div className="mt-16 pt-8 border-t border-[var(--primary-color)]/20 animate-fade-in">
+            <p className="text-[var(--text-color-secondary)] mb-6">Join tech leaders who've accelerated their careers at</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Microsoft</div>
+              <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Google</div>
+              <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Apple</div>
+              <div className="text-2xl font-bold text-[var(--text-color-secondary)]">Amazon</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
