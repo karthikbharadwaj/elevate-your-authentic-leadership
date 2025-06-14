@@ -20,7 +20,12 @@ const testimonials = [
     name: "Anu Thakur",
     role: "",
     content: "Every coach needs a coach, and I found mine in Karthik. I met Karthik through an online peer-to-peer coaching platform. Karthik's deep understanding of coaching principles and empathetic approach made each session insightful. Karthik helped me identify my strengths, step out of my comfort zone and build confidence. His practical suggestions equipped me to navigate some events in my life more effectively. Thank you Karthik for all the support and for enabling me!",
-  }
+  },
+  {
+    name: "Aniket Anjali Pohekar",
+    role: "",
+    content: "Every session was impactful. His approach has helped me gain clarity and move forward with a clear action plan, which is exactly what good coaching should do. What also stands out about Karthik is his ability to bring a thoughtful, spiritual perspective into conversations. It adds depth to his coaching and makes him an insightful and steady thinking partner. I highly recommend Karthik to anyone facing personal or professional challenges and looking for a coach who can help them navigate their way forward.",
+  },
 ];
 
 export const Testimonials = () => {
