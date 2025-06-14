@@ -45,7 +45,7 @@ export const Services = () => {
         {/* Challenge Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Are You Tired of Being the Best-Kept Secret in Your Organization?
+            If You're a Tech Leader Who Feels Stuck Despite Your Brilliance, This Message Is For You
           </h2>
           <p className="text-xl text-[var(--text-color)] max-w-4xl mx-auto mb-8">
             You're brilliant. Your technical skills are undeniable. But somehow, you're still stuck watching others advance while you wonder what you're missing. Sound familiar?
