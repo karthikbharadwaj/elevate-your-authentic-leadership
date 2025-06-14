@@ -116,7 +116,7 @@ const loadImage = (file: Blob): Promise<HTMLImageElement> => {
 };
 
 export const AboutCoach = () => {
-  const [profileImage, setProfileImage] = useState("/lovable-uploads/d57d57e5-7676-46fa-9888-c59301e86601.png");
+  const [profileImage, setProfileImage] = useState("/lovable-uploads/483eb0f3-d243-4982-8c79-742f857ff62d.png");
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
@@ -127,7 +127,7 @@ export const AboutCoach = () => {
   const processDefaultImage = async () => {
     try {
       setIsProcessing(true);
-      const response = await fetch("/lovable-uploads/d57d57e5-7676-46fa-9888-c59301e86601.png");
+      const response = await fetch("/lovable-uploads/483eb0f3-d243-4982-8c79-742f857ff62d.png");
       const blob = await response.blob();
       const img = await loadImage(blob);
       const processedBlob = await removeBackground(img);
