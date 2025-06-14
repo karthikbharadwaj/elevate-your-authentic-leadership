@@ -43,20 +43,20 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 hero-section">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
             Success Stories
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto">
             Discover how leaders have transformed their careers and organizations through our coaching programs.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="glass-card border-0 hover-lift relative overflow-hidden">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -64,15 +64,15 @@ export const Testimonials = () => {
                   ))}
                 </div>
                 
-                <Quote className="w-8 h-8 text-blue-600 mb-4 opacity-50" />
+                <Quote className="w-8 h-8 text-[var(--primary-color)] mb-4 opacity-50" />
                 
-                <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                <blockquote className="text-[var(--text-color)] mb-6 leading-relaxed">
                   "{testimonial.content}"
                 </blockquote>
                 
-                <div className="border-t pt-4">
-                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                  <div className="text-blue-600 font-medium">{testimonial.role}</div>
+                <div className="border-t border-[var(--primary-color)]/20 pt-4">
+                  <div className="font-semibold text-[var(--text-color)]">{testimonial.name}</div>
+                  <div className="text-[var(--primary-color)] font-medium">{testimonial.role}</div>
                 </div>
               </CardContent>
             </Card>

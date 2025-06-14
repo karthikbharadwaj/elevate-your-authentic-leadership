@@ -33,22 +33,22 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-24 hero-section">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
             Ready to Transform Your Leadership?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto">
             Take the first step towards becoming the leader you were meant to be. Schedule your complimentary consultation today.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fade-in-up">
           {/* Contact Form */}
-          <Card className="shadow-xl border-0">
+          <Card className="glass-card border-0 relative overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-gray-900">
+              <CardTitle className="text-2xl font-bold gradient-text">
                 Get Started Today
               </CardTitle>
             </CardHeader>
@@ -56,7 +56,7 @@ export const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
                       Full Name *
                     </label>
                     <Input
@@ -64,12 +64,12 @@ export const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
                       Email Address *
                     </label>
                     <Input
@@ -78,27 +78,27 @@ export const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full"
+                      className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
                     Company / Organization
                   </label>
                   <Input
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full"
+                    className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
                     placeholder="Your company name"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-color)] mb-2">
                     How can I help you? *
                   </label>
                   <Textarea
@@ -107,7 +107,7 @@ export const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full"
+                    className="w-full bg-[var(--background)]/50 border-[var(--primary-color)]/30 text-[var(--text-color)]"
                     placeholder="Tell me about your leadership challenges and goals..."
                   />
                 </div>
@@ -115,7 +115,7 @@ export const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-full font-semibold"
+                  className="golden-button w-full py-4 rounded-full font-semibold"
                 >
                   Send Message & Schedule Consultation
                 </Button>
@@ -125,45 +125,45 @@ export const Contact = () => {
           
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="shadow-lg border-0">
+            <Card className="glass-card border-0 relative overflow-hidden">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold gradient-text mb-6">
                   Let's Connect
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <Mail className="w-6 h-6 text-blue-600 mr-4" />
+                    <Mail className="w-6 h-6 text-[var(--primary-color)] mr-4" />
                     <div>
-                      <div className="font-medium text-gray-900">Email</div>
-                      <div className="text-gray-600">coach@leadership.com</div>
+                      <div className="font-medium text-[var(--text-color)]">Email</div>
+                      <div className="text-[var(--text-color-secondary)]">coach@leadership.com</div>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <Phone className="w-6 h-6 text-blue-600 mr-4" />
+                    <Phone className="w-6 h-6 text-[var(--primary-color)] mr-4" />
                     <div>
-                      <div className="font-medium text-gray-900">Phone</div>
-                      <div className="text-gray-600">+1 (555) 123-4567</div>
+                      <div className="font-medium text-[var(--text-color)]">Phone</div>
+                      <div className="text-[var(--text-color-secondary)]">+1 (555) 123-4567</div>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="w-6 h-6 text-blue-600 mr-4" />
+                    <MapPin className="w-6 h-6 text-[var(--primary-color)] mr-4" />
                     <div>
-                      <div className="font-medium text-gray-900">Location</div>
-                      <div className="text-gray-600">San Francisco, CA</div>
+                      <div className="font-medium text-[var(--text-color)]">Location</div>
+                      <div className="text-[var(--text-color-secondary)]">San Francisco, CA</div>
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <Calendar className="w-6 h-6 text-blue-600 mr-4" />
+                    <Calendar className="w-6 h-6 text-[var(--primary-color)] mr-4" />
                     <div>
-                      <div className="font-medium text-gray-900">Response Time</div>
-                      <div className="text-gray-600">Within 24 hours</div>
+                      <div className="font-medium text-[var(--text-color)]">Response Time</div>
+                      <div className="text-[var(--text-color-secondary)]">Within 24 hours</div>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
             
-            <Card className="shadow-lg border-0 bg-blue-600 text-white">
+            <Card className="glass-card border-0 bg-gradient-to-br from-[var(--primary-color)] to-[var(--primary-light)] text-black relative overflow-hidden">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">
                   Free Consultation
@@ -174,7 +174,7 @@ export const Contact = () => {
                 <Button 
                   variant="secondary" 
                   size="lg"
-                  className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                  className="w-full bg-black text-white hover:bg-gray-800 font-semibold"
                 >
                   Schedule Free Call
                 </Button>

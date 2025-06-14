@@ -11,14 +11,14 @@ const stats = [
 
 export const About = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-24 hero-section">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          <div className="animate-fade-in-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text">
               About Your Leadership Coach
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-lg text-[var(--text-color)] leading-relaxed">
               <p>
                 With over 15 years of experience in executive leadership and coaching, I've dedicated my career to helping leaders unlock their full potential and create lasting organizational change.
               </p>
@@ -31,25 +31,25 @@ export const About = () => {
             </div>
             <Button 
               size="lg" 
-              className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
+              className="golden-button mt-8 px-8 py-4 rounded-full font-semibold"
             >
               Learn More About My Approach
             </Button>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-8 animate-fade-in-up">
             {/* Profile image placeholder */}
-            <div className="bg-gradient-to-br from-blue-200 to-indigo-300 rounded-2xl aspect-square flex items-center justify-center text-4xl font-bold text-blue-800 shadow-xl">
+            <div className="glass-card rounded-2xl aspect-square flex items-center justify-center text-4xl font-bold gradient-text relative overflow-hidden">
               Your Photo
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div key={index} className="glass-card p-6 rounded-xl text-center hover-lift relative overflow-hidden">
+                  <stat.icon className="w-8 h-8 text-[var(--primary-color)] mx-auto mb-3" />
+                  <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
+                  <div className="text-[var(--text-color-secondary)] font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
