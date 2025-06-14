@@ -24,7 +24,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
-            Transform your potential into promotions and influence through powerful self-discovery and accountability partnership. No more second-guessing.
+            Develop the clarity, confidence, and executive presence that commands respect and drives results. Lead with authenticity and watch your career accelerate.
           </p>
           
           <div className="flex justify-center animate-fade-in-up">
