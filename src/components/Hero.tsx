@@ -23,7 +23,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
-            You're already brilliant. You just need the proven system to transform your potential into promotions, influence, and the career breakthrough you deserve. No more second-guessing, no more waiting for the "perfect moment."
+            You're already brilliant. You just need the strategic guidance and accountability to transform your potential into promotions, influence, and the career breakthrough you deserve. No more second-guessing, no more waiting for the "perfect moment."
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up">
