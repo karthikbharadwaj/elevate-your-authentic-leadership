@@ -21,9 +21,9 @@ export const Contact = () => {
           </div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fade-in-up">
+        <div className="flex justify-center animate-fade-in-up">
           {/* Direct Calendly Section */}
-          <Card className="glass-card border-0 relative overflow-hidden">
+          <Card className="glass-card border-0 relative overflow-hidden max-w-xl w-full">
             <CardHeader>
               <CardTitle className="text-2xl font-bold gradient-text">
                 Ready for Your Promotion? Start Here.
@@ -46,34 +46,6 @@ export const Contact = () => {
               </p>
             </CardContent>
           </Card>
-          
-          {/* Contact Information */}
-          <div className="space-y-8">
-            
-            <Card className="glass-card border-0 bg-gradient-to-br from-[var(--primary-color)] to-[var(--primary-light)] text-black relative overflow-hidden">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">
-                  Don't Wait Another Day
-                </h3>
-                <p className="mb-6 opacity-90">
-                  Every promotion cycle you miss is another year of watching others advance. The tech leaders getting promoted aren't necessarily smarter than you - they just have the strategic advantage you're about to gain.
-                </p>
-                <div className="mb-6 p-4 bg-black/10 rounded-lg">
-                  <p className="font-semibold">
-                    "I wish I had started this journey sooner. The transformation in just 3 months was incredible." - Sarah Chen, VP of Engineering
-                  </p>
-                </div>
-                <Button 
-                  variant="secondary" 
-                  size="lg"
-                  className="w-full bg-black text-white hover:bg-gray-800 font-semibold"
-                  onClick={() => window.open('https://calendly.com/coach-karthikbharadwaj/coaching_discovery', '_blank')}
-                >
-                  Yes, I'm Ready to Transform My Leadership
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
