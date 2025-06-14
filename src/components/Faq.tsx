@@ -12,6 +12,10 @@ const faqs = [
     answer: "This program is designed for ambitious tech leaders, managers, and senior individual contributors who are ready to break through to the next level but feel stuck. If you're brilliant technically but are being overlooked for promotions, this is for you."
   },
   {
+    question: "What is Coaching?",
+    answer: "Coaching is a collaborative partnership designed to help you unlock your full potential. It's a forward-looking process where we identify your goals, overcome obstacles, and create actionable strategies for you to achieve personal and professional growth. Unlike consulting or mentoring, coaching empowers you to find your own answers."
+  },
+  {
     question: "What if I'm not in a formal leadership role yet?",
     answer: "That's the perfect time to start. The principles in the 4P Leadership Compass are designed to help you develop executive presence and influence, making you the obvious choice for the next leadership opportunity, even before you have the title."
   },
