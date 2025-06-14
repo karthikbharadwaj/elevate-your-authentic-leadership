@@ -19,7 +19,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight gradient-text animate-fade-in-up">
-            Lead with Authentic Power: Master the Clarity, Confidence, and Executive Presence That Transforms Careers and Commands Respect
+            Master Executive Presence That Commands Respect
           </h1>
           
           <p className="text-xl md:text-2xl text-[var(--text-color)] mb-12 max-w-3xl mx-auto leading-relaxed font-medium animate-fade-in-up">
