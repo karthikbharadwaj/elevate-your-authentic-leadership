@@ -147,7 +147,7 @@ export const Services = () => {
             </div>
             
             <p className="text-lg leading-relaxed">
-              Over the years, I've helped hundreds of tech professionals, engineers, and rising leaders develop authentic leadership skills. I've done this through one-on-one coaching, team workshops, executive mentoring, and my signature 4P Leadership Compass program.
+              Over the years, I've helped hundreds of tech professionals, engineers, and rising leaders develop authentic leadership skills through personalized coaching, team workshops, and executive mentoring.
             </p>
             
             <p className="text-lg leading-relaxed font-semibold">
@@ -168,37 +168,37 @@ export const Services = () => {
             
             <div className="bg-[var(--primary-color)]/5 p-8 rounded-xl my-8">
               <p className="text-xl font-bold gradient-text mb-4 text-center">
-                It's an entire framework to transform you into an authentic leader who gets promoted.
+                It's a personalized coaching program that transforms you into an authentic leader who gets promoted.
               </p>
               
               <p className="text-lg leading-relaxed mb-6">
-                It's a complete set of step-by-step, proven strategies that gives you:
+                It's a complete framework of 1:1 tailored coaching sessions that gives you:
               </p>
               
               <ul className="space-y-3 text-[var(--text-color)]">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>3 months of intensive coaching</strong> across the 4 pillars of authentic leadership</span>
+                  <span><strong>6 personalized coaching sessions</strong> over 3 months focused on your specific leadership challenges</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>An experienced tech leader</strong> to guide you through every challenge</span>
+                  <span><strong>Tailored assessment</strong> of the 4 dimensions of authentic leadership unique to your situation</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>Proven frameworks</strong> you can use immediately in your current role</span>
+                  <span><strong>An experienced tech leader</strong> to guide you through every challenge with real-world experience</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>Real-world application</strong> to your specific leadership challenges</span>
+                  <span><strong>Customized strategies</strong> you can implement immediately in your current role</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>A structured path</strong> to executive presence and promotion readiness</span>
+                  <span><strong>Personalized roadmap</strong> to executive presence and promotion readiness</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span><strong>Accountability and support</strong> to help you when you hit obstacles</span>
+                  <span><strong>Ongoing accountability</strong> and support to help you when you hit obstacles</span>
                 </li>
               </ul>
             </div>
@@ -208,15 +208,15 @@ export const Services = () => {
             </p>
             
             <p className="text-lg leading-relaxed font-semibold">
-              It means that you won't waste time learning leadership theory you can't use. It means you'll get the skills for that promotion or to confidently lead at the executive level.
+              It means that you won't waste time learning leadership theory you can't use. It means you'll get personalized coaching for that promotion or to confidently lead at the executive level.
             </p>
             
             <p className="text-lg leading-relaxed">
-              You get the same leadership tools I used to build high-performing teams, navigate complex organizational politics, lead through crises, and accelerate careers.
+              You get the same leadership tools and personalized guidance I used to build high-performing teams, navigate complex organizational politics, lead through crises, and accelerate careers.
             </p>
             
             <p className="text-lg leading-relaxed font-semibold">
-              So if you're struggling to develop authentic leadership that actually gets results, this program is for you.
+              So if you're struggling to develop authentic leadership that actually gets results, this coaching program is for you.
             </p>
           </div>
         </div>
@@ -224,10 +224,10 @@ export const Services = () => {
         {/* 4P Program Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            The 4P Leadership Compass: Your Blueprint to Executive Success
+            The 4P Leadership Compass: Your Personalized Blueprint to Executive Success
           </h2>
           <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto mb-8">
-            Stop leaving your career to chance. In just 3 months, you'll master the four pillars that separate good managers from executive leaders who get promoted, respected, and rewarded.
+            Stop leaving your career to chance. Through 6 personalized coaching sessions over 3 months, you'll master the four dimensions of authentic leadership that separate good managers from executive leaders who get promoted, respected, and rewarded.
           </p>
         </div>
         
@@ -264,7 +264,7 @@ export const Services = () => {
 
         {/* Results Section */}
         <div className="glass-card p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold gradient-text mb-6">The Transformation My Clients Experience</h3>
+          <h3 className="text-2xl font-bold gradient-text mb-6">The Transformation My Coaching Clients Experience</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="space-y-2">
               <div className="text-3xl">⚡</div>
@@ -284,7 +284,7 @@ export const Services = () => {
           </div>
           <div className="mt-8 p-6 bg-gradient-to-r from-[var(--primary-color)]/10 to-[var(--primary-light)]/10 rounded-xl">
             <p className="text-lg text-[var(--text-color)] font-medium">
-              <strong>Here's what I promise:</strong> In 90 days, you'll either have the promotion conversation you've been avoiding, or you'll have the unshakeable confidence to demand the recognition you deserve. <em>That's not just a goal—it's your new reality.</em>
+              <strong>Here's what I promise:</strong> In 90 days of personalized coaching, you'll either have the promotion conversation you've been avoiding, or you'll have the unshakeable confidence to demand the recognition you deserve. <em>That's not just a goal—it's your new reality.</em>
             </p>
           </div>
         </div>
