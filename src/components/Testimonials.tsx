@@ -4,39 +4,39 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
-    content: "The coaching transformed how I lead my team. I've seen a 40% improvement in team engagement and our company culture has never been stronger.",
+    name: "Sarah Chen",
+    role: "VP of Engineering, TechStart Inc.",
+    content: "The 4P Leadership Compass program transformed how I navigate organizational politics. I got promoted to VP within 4 months and now lead with confidence in high-pressure situations.",
     rating: 5
   },
   {
-    name: "Michael Chen",
-    role: "VP of Operations, Global Corp",
-    content: "Working together helped me navigate complex organizational changes with confidence. The strategic thinking frameworks are invaluable.",
+    name: "Michael Rodriguez",
+    role: "Senior Director, Global Tech Corp",
+    content: "Working together helped me overcome imposter syndrome and develop the executive presence I needed. My team engagement improved by 40% and I finally feel in control of my career.",
     rating: 5
   },
   {
-    name: "Emily Rodriguez",
-    role: "Director, Innovation Labs",
-    content: "I gained clarity on my leadership vision and learned to communicate it effectively. My team now rallies behind our shared purpose.",
+    name: "Emily Park",
+    role: "CTO, AI Innovations",
+    content: "The clarity I gained on Purpose and Progress was game-changing. I stopped second-guessing myself and made confident decisions that accelerated both my career and our company's growth.",
     rating: 5
   },
   {
     name: "David Thompson",
-    role: "Founder, Scale Ventures",
-    content: "The authentic leadership approach helped me build genuine connections with my team. Our productivity and morale have skyrocketed.",
+    role: "Engineering Manager, Scale Ventures",
+    content: "The People dimension of the program helped me navigate complex team dynamics and organizational challenges. I now influence at the executive level with confidence.",
     rating: 5
   },
   {
-    name: "Lisa Park",
-    role: "COO, Future Systems",
-    content: "I developed the emotional intelligence skills that were missing from my leadership toolkit. It's been a game-changer for my career.",
+    name: "Lisa Kim",
+    role: "Principal Engineer, Future Systems",
+    content: "I developed the leadership presence and communication skills that were missing from my toolkit. It's been instrumental in my transition to engineering leadership.",
     rating: 5
   },
   {
     name: "James Wilson",
-    role: "Senior Manager, Enterprise Corp",
-    content: "The coaching gave me the confidence to take on bigger challenges. I was promoted to VP within 6 months of our program.",
+    role: "Head of Product, Enterprise Corp",
+    content: "The program gave me a clear roadmap for my next career step. I learned to control the pace of my growth while maintaining work-life balance. Highly recommend!",
     rating: 5
   }
 ];
@@ -47,10 +47,10 @@ export const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            Success Stories
+            Success Stories from Tech Leaders
           </h2>
           <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto">
-            Discover how leaders have transformed their careers and organizations through our coaching programs.
+            Discover how ambitious tech professionals have accelerated their careers and transformed their leadership through the 4P Leadership Compass program.
           </p>
         </div>
         
