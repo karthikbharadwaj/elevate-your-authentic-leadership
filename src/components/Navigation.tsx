@@ -44,16 +44,16 @@ export const Navigation = () => {
           <div className="flex items-center">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-2xl font-bold"
+              className="text-xl font-bold"
             >
               <span
                 className={`transition-colors duration-300 ${
                   isScrolled
-                    ? "bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] bg-clip-text text-transparent"
-                    : "text-white"
+                    ? "text-[#1E40AF]"
+                    : "text-gray-900"
                 }`}
               >
-                Karthik Bharadwaj
+                4P Leadership Accelerator
               </span>
             </button>
           </div>
@@ -63,34 +63,42 @@ export const Navigation = () => {
             <button
               onClick={() => scrollToSection("services")}
               className={`font-medium transition-colors hover:text-[#3B82F6] ${
-                isScrolled ? "text-gray-700" : "text-white"
+                isScrolled ? "text-gray-700" : "text-gray-900"
               }`}
             >
-              4P Framework
+              Your Challenge
+            </button>
+            <button
+              onClick={() => scrollToSection("program")}
+              className={`font-medium transition-colors hover:text-[#3B82F6] ${
+                isScrolled ? "text-gray-700" : "text-gray-900"
+              }`}
+            >
+              The Accelerator
+            </button>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
+              className={`font-medium transition-colors hover:text-[#3B82F6] ${
+                isScrolled ? "text-gray-700" : "text-gray-900"
+              }`}
+            >
+              How We Help
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className={`font-medium transition-colors hover:text-[#3B82F6] ${
-                isScrolled ? "text-gray-700" : "text-white"
+                isScrolled ? "text-gray-700" : "text-gray-900"
               }`}
             >
-              About
+              Meet Your Coach
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
               className={`font-medium transition-colors hover:text-[#3B82F6] ${
-                isScrolled ? "text-gray-700" : "text-white"
+                isScrolled ? "text-gray-700" : "text-gray-900"
               }`}
             >
               Success Stories
-            </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className={`font-medium transition-colors hover:text-[#3B82F6] ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
-            >
-              FAQ
             </button>
             <Button
               onClick={() =>
@@ -99,9 +107,9 @@ export const Navigation = () => {
                   "_blank"
                 )
               }
-              className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] text-white hover:from-[#1E3A8A] hover:to-[#2563EB] font-semibold px-6 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-[#1E40AF] text-white hover:bg-[#1E3A8A] font-semibold px-8 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Book Discovery Call
+              Book Your Free Call →
             </Button>
           </div>
 
@@ -130,25 +138,31 @@ export const Navigation = () => {
                 onClick={() => scrollToSection("services")}
                 className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
               >
-                4P Framework
+                Your Challenge
+              </button>
+              <button
+                onClick={() => scrollToSection("program")}
+                className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
+              >
+                The Accelerator
+              </button>
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
+              >
+                How We Help
               </button>
               <button
                 onClick={() => scrollToSection("about")}
                 className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
               >
-                About
+                Meet Your Coach
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
                 className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
               >
                 Success Stories
-              </button>
-              <button
-                onClick={() => scrollToSection("faq")}
-                className="text-left px-4 py-2 text-gray-700 hover:text-[#3B82F6] font-medium transition-colors"
-              >
-                FAQ
               </button>
               <div className="px-4">
                 <Button
@@ -158,9 +172,9 @@ export const Navigation = () => {
                       "_blank"
                     )
                   }
-                  className="w-full bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] text-white hover:from-[#1E3A8A] hover:to-[#2563EB] font-semibold px-6 py-2 rounded-full transition-all duration-300"
+                  className="w-full bg-[#1E40AF] text-white hover:bg-[#1E3A8A] font-semibold px-6 py-2 rounded-full transition-all duration-300"
                 >
-                  Book Discovery Call
+                  Book Your Free Call →
                 </Button>
               </div>
             </div>

@@ -14,11 +14,11 @@ export const AboutCoach = () => {
             <p className="text-xl text-gray-600">From Tech Builder to Executive Coach</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Profile Image Section */}
-            <div className="text-center lg:text-left animate-fade-in-up">
+            <div className="text-center lg:text-left animate-fade-in-up lg:pt-20">
               <div className="relative inline-block">
-                <div className="w-80 h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-xl">
+                <div className="w-96 h-96 md:w-[500px] md:h-[500px] mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src="/lovable-uploads/coach_profile_pic.jpeg"
                     alt="Karthik Bharadwaj - Executive Coach"
@@ -39,10 +39,10 @@ export const AboutCoach = () => {
                 Technical brilliance doesn't equal leadership success.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                The best engineers often struggle as leaders—not because they can't lead, but because no one taught them how. I was working with AI way before it became mainstream, and I understand firsthand where tech leadership is heading.
+                The best engineers often struggle as leaders, not because they can't lead, but because no one taught them how. I was working with AI way before it became mainstream, and I understand firsthand where tech leadership is heading.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                As an Executive Coach, I help tech leaders overcome self-doubt, build executive presence, and accelerate their careers. That often means getting promoted faster and successfully navigating new roles—but it starts with overcoming what you can't even see holding you back.
+                As an Executive Coach, I help tech leaders overcome self-doubt, build executive presence, and accelerate their careers. That often means getting promoted faster and successfully navigating new roles, but it starts with overcoming what you can't even see holding you back.
               </p>
 
               <Card className="border-0 shadow-lg bg-white mt-8">
@@ -76,7 +76,7 @@ export const AboutCoach = () => {
                       <CheckCircle2 className="w-6 h-6 text-[#3B82F6] flex-shrink-0 mt-1" />
                       <div>
                         <div className="font-semibold text-gray-900">Personal Attention</div>
-                        <div className="text-gray-600">You work directly with me—no junior coaches or generic programs</div>
+                        <div className="text-gray-600">You work directly with me, no junior coaches or generic programs</div>
                       </div>
                     </div>
                   </div>

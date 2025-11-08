@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "What if I'm not in a formal leadership role yet?",
-    answer: "That's the perfect time to start. The principles in the 4P Leadership Compass are designed to help you develop executive presence and influence, making you the obvious choice for the next leadership opportunity, even before you have the title."
+    answer: "That's the perfect time to start. The principles in the 4P Leadership Accelerator are designed to help you develop executive presence and influence, making you the obvious choice for the next leadership opportunity, even before you have the title."
   },
   {
     question: "How long is the program?",
@@ -50,7 +50,7 @@ export const Faq = () => {
             Questions? <span className="gradient-text">Answered.</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about the 4P Leadership Compass program
+            Everything you need to know about the 4P Leadership Accelerator program
           </p>
         </div>
         <div className="max-w-4xl mx-auto animate-fade-in-up">

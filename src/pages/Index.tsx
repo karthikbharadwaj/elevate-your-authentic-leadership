@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { HowItWorks } from "@/components/HowItWorks";
+import { LeadMagnet } from "@/components/LeadMagnet";
 import { AboutCoach } from "@/components/AboutCoach";
 import { Testimonials } from "@/components/Testimonials";
 import { CTASection } from "@/components/CTASection";
@@ -19,7 +20,10 @@ const Index = () => {
       <div id="services">
         <Services />
       </div>
-      <HowItWorks />
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
+      <LeadMagnet />
       <CTASection variant="compact" />
       <div id="about">
         <AboutCoach />

@@ -71,7 +71,7 @@ export const HowItWorks = () => {
           {/* How The Program Works */}
           <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] p-8 md:p-12 rounded-3xl">
             <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-              How The <span className="gradient-text">4P Leadership Compass</span> Works
+              How The <span className="gradient-text">4P Leadership Accelerator</span> Works
             </h3>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

@@ -58,7 +58,7 @@ export const Services = () => {
                   You know you're capable, but in high-stakes meetings, you hesitate. Your ideas get overlooked. Others with less expertise command the room.
                 </p>
                 <p>
-                  The truth is, <strong>it's not a skill problem</strong>—it's a <em>visibility and confidence problem</em>.
+                  The truth is, <strong>it's not a skill problem</strong>, it's a <em>visibility and confidence problem</em>.
                 </p>
                 <p>
                   Showing up with authentic leadership presence is hard. Articulating your value without sounding arrogant feels impossible.
@@ -89,11 +89,11 @@ export const Services = () => {
         </div>
 
         {/* 4P Program Section */}
-        <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-20 px-6 rounded-3xl">
+        <div id="program" className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-20 px-6 rounded-3xl">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                The 4P Leadership Compass: <span className="gradient-text">Your Blueprint to Executive Success</span>
+                The 4P Leadership Accelerator: <span className="gradient-text">Your Blueprint to Executive Success</span>
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                 Stop leaving your career to chance. In just <strong>3 months</strong>, you'll master the four pillars that separate good managers from executive leaders who get promoted, respected, and rewarded.
@@ -140,7 +140,7 @@ export const Services = () => {
                 <div className="text-center space-y-3">
                   <div className="text-5xl">⚡</div>
                   <h4 className="font-bold text-xl text-gray-900">Lightning-Fast Decisions</h4>
-                  <p className="text-gray-600">No more analysis paralysis—make confident choices that accelerate results</p>
+                  <p className="text-gray-600">No more analysis paralysis, make confident choices that accelerate results</p>
                 </div>
                 <div className="text-center space-y-3">
                   <div className="text-5xl">🎯</div>
