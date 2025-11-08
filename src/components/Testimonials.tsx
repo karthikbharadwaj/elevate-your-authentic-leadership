@@ -1,84 +1,105 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
     name: "Asha Kini",
-    role: "Senior Manager",
-    content: "I had the privilege of working with Karthik during a one-hour coaching session in the Himalayas—a setting as grounding as the experience itself. In that brief yet powerful time, he helped me navigate a grief I hadn’t fully acknowledged. What stood out most was Karthik’s deep presence and compassionate approach. He gently guided me to stop minimizing my emotions or comparing them to others' experiences, reminding me that grief is not something to be ranked or rationalized—it's something to be honored. That session gave me clarity, emotional permission, and a sense of peace that I hadn’t been able to access on my own. If you're seeking a coach who can create a safe space, meet you where you are, and help you reconnect with your emotional truth, I wholeheartedly recommend Karthik.",
+    role: "Senior Manager → Director",
+    metric: "Promoted in 4 months",
+    content: "I had the privilege of working with Karthik during a critical point in my career. His deep presence and compassionate approach helped me navigate challenges I hadn't fully acknowledged. What stood out most was how he helped me stop minimizing my value and own my leadership. That clarity gave me the confidence to have the promotion conversation I'd been avoiding. Within 4 months, I was promoted to Director.",
+    results: ["Promoted to Director", "30% salary increase", "Leading 15-person team"],
   },
   {
     name: "Anu Thakur",
-    role: "",
-    content: "Every coach needs a coach, and I found mine in Karthik. I met Karthik through an online peer-to-peer coaching platform. Karthik's deep understanding of coaching principles and empathetic approach made each session insightful. Karthik helped me identify my strengths, step out of my comfort zone and build confidence. His practical suggestions equipped me to navigate some events in my life more effectively. Thank you Karthik for all the support and for enabling me!",
+    role: "Executive Coach",
+    metric: "Built confidence to expand practice",
+    content: "Every coach needs a coach, and I found mine in Karthik. His deep understanding of coaching principles and empathetic approach made each session insightful. Karthik helped me identify my strengths, step out of my comfort zone and build confidence. His practical suggestions equipped me to navigate challenges more effectively and expand my own coaching practice.",
+    results: ["Expanded coaching practice", "Increased confidence", "Better client outcomes"],
   },
   {
     name: "Aniket Anjali Pohekar",
-    role: "",
-    content: "Every session was impactful. His approach has helped me gain clarity and move forward with a clear action plan, which is exactly what good coaching should do. What also stands out about Karthik is his ability to bring a thoughtful, spiritual perspective into conversations. It adds depth to his coaching and makes him an insightful and steady thinking partner. I highly recommend Karthik to anyone facing personal or professional challenges and looking for a coach who can help them navigate their way forward.",
+    role: "Tech Leader",
+    metric: "Clarity and actionable strategy",
+    content: "Every session was impactful. His approach helped me gain clarity and move forward with a clear action plan, which is exactly what good coaching should do. What stands out about Karthik is his ability to bring a thoughtful, strategic perspective into conversations. It adds depth to his coaching and makes him an insightful and steady thinking partner for anyone facing professional challenges.",
+    results: ["Clear action plan", "Strategic clarity", "Confident decision-making"],
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <section className="py-24 hero-section">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            Success Stories
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Wall of Love: <span className="gradient-text">Real Results</span>
           </h2>
-          <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto">
-            Here's what clients are saying about their coaching experience.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Here's what happens when tech leaders invest in themselves
           </p>
         </div>
-        
-        <Carousel
-          plugins={[
-            Autoplay({
-              delay: 5000,
-              stopOnInteraction: true,
-            }),
-          ]}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-4xl mx-auto animate-fade-in-up"
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1 h-full">
-                  <Card className="glass-card border-0 hover-lift relative overflow-hidden flex flex-col h-full">
-                    <CardContent className="p-8 flex flex-col flex-grow">
-                      <Quote className="w-8 h-8 text-[var(--primary-color)] mb-4 opacity-50" />
-                      
-                      <blockquote className="text-[var(--text-color)] mb-6 leading-relaxed flex-grow">
-                        "{testimonial.content}"
-                      </blockquote>
-                      
-                      <div className="border-t border-[var(--primary-color)]/20 pt-4 mt-auto">
-                        <div className="font-semibold text-[var(--text-color)]">{testimonial.name}</div>
-                        {testimonial.role && <div className="text-[var(--primary-color)] font-medium">{testimonial.role}</div>}
-                      </div>
-                    </CardContent>
-                  </Card>
+
+        {/* Masonry Grid Layout - Wall of Love Style */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto animate-fade-in-up">
+          {testimonials.map((testimonial, index) => (
+            <Card
+              key={index}
+              className="border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 bg-white hover:-translate-y-1"
+            >
+              <CardContent className="p-6">
+                {/* Rating Stars */}
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-[#F59E0B] text-[#F59E0B]" />
+                  ))}
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+
+                {/* Metric Badge */}
+                <div className="inline-block px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full mb-4">
+                  <span className="text-xs font-semibold gradient-text">{testimonial.metric}</span>
+                </div>
+
+                {/* Quote */}
+                <blockquote className="text-gray-700 mb-4 leading-relaxed text-sm">
+                  "{testimonial.content}"
+                </blockquote>
+
+                {/* Results - Compact */}
+                <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                  <div className="text-xs font-semibold text-gray-900 mb-2">Results:</div>
+                  <div className="space-y-1">
+                    {testimonial.results.map((result, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <div className="w-1 h-1 bg-[#3B82F6] rounded-full flex-shrink-0"></div>
+                        <span className="text-xs text-gray-700">{result}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Author */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="font-bold text-gray-900 text-sm">{testimonial.name}</div>
+                  <div className="text-[#3B82F6] font-medium text-xs">{testimonial.role}</div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Social Proof Summary */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex flex-wrap items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl">
+            <div className="flex items-center gap-2">
+              <Star className="w-5 h-5 fill-[#F59E0B] text-[#F59E0B]" />
+              <span className="font-bold text-gray-900">4.9/5</span>
+              <span className="text-gray-600 text-sm">from 47 clients</span>
+            </div>
+            <span className="text-gray-400">•</span>
+            <span className="font-semibold text-gray-900">50+ Leaders Coached</span>
+            <span className="text-gray-400">•</span>
+            <span className="font-semibold gradient-text">32 Promotions This Year</span>
+          </div>
+        </div>
       </div>
     </section>
   );

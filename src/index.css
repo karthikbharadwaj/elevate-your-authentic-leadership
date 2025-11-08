@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: #C8a05a;
-    --primary-light: #d4b06a;
-    --text-color: #ffffff;
-    --text-color-secondary: #e0e0e0;
-    --background: #2a2a2a;
-    --gradient-start: #FFD700;
-    --gradient-end: #C8a05a;
+    --primary-color: #1E40AF;
+    --primary-light: #3B82F6;
+    --accent-gold: #F59E0B;
+    --text-color: #0F172A;
+    --text-color-secondary: #475569;
+    --text-color-tertiary: #94A3B8;
+    --background: #F8FAFC;
+    --background-white: #FFFFFF;
+    --gradient-start: #1E40AF;
+    --gradient-end: #3B82F6;
 
     --background: 0 0% 16.5%;
     --foreground: 0 0% 100%;
@@ -73,21 +76,18 @@
         font-family: 'Inter', sans-serif;
         line-height: 1.6;
         color: var(--text-color);
-        background-color: #2a2a2a !important;
+        background-color: var(--background) !important;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background-image: 
-            radial-gradient(circle at 100% 0%, rgba(200, 160, 90, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(200, 160, 90, 0.1) 0%, transparent 50%);
     }
-    
+
     html {
-        background-color: #2a2a2a !important;
+        background-color: var(--background) !important;
     }
-    
+
     #root {
-        background-color: #2a2a2a !important;
+        background-color: var(--background) !important;
         min-height: 100vh;
     }
 }
@@ -122,41 +122,41 @@
 }
 
 .hero-section {
-    background-color: var(--background);
-    background-image: 
-        radial-gradient(circle at 100% 0%, rgba(200, 160, 90, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 0% 100%, rgba(200, 160, 90, 0.1) 0%, transparent 50%);
+    background-color: var(--background-white);
 }
 
 .gradient-text {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(200, 160, 90, 0.3);
+    background-clip: text;
 }
 
 .golden-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #000;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: #ffffff;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
 }
 
 .golden-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-    color: #000;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.4);
+    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+    color: #ffffff;
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(200, 160, 90, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: var(--background-white);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card::before {
@@ -165,7 +165,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
 }
 

@@ -43,24 +43,28 @@ const faqs = [
 
 export const Faq = () => {
   return (
-    <section className="py-24 hero-section">
+    <section className="py-24 bg-[#F8FAFC]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            Frequently Asked Questions
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Questions? <span className="gradient-text">Answered.</span>
           </h2>
-          <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto">
-            Your questions, answered. Here’s what you need to know about the 4P Leadership Compass program.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Everything you need to know about the 4P Leadership Compass program
           </p>
         </div>
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={index} className="glass-card mb-4 rounded-xl border-0 px-6">
-                <AccordionTrigger className="text-left text-lg font-semibold text-[var(--text-color)] hover:no-underline">
+              <AccordionItem
+                value={`item-${index}`}
+                key={index}
+                className="bg-white border border-gray-200 rounded-xl px-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:no-underline py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-[var(--text-color-secondary)] leading-relaxed">
+                <AccordionContent className="text-base text-gray-700 leading-relaxed pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -1,6 +1,5 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Users, Zap, TrendingUp } from "lucide-react";
+import { Target, Users, Zap, TrendingUp, CheckCircle2 } from "lucide-react";
 
 const services = [
   {
@@ -29,109 +28,137 @@ const services = [
   }
 ];
 
-const challenges = [
-  "Feel stuck watching others get promoted while you're passed over despite your technical brilliance?",
-  "Lie awake at night stressed about high-pressure decisions and team conflicts that seem impossible to navigate?",
-  "Feel frustrated by organizational politics that seem designed to keep you from advancing?",
-  "Know you're capable of more but lack the clear roadmap to get there?",
-  "Have that nagging inner voice convincing you that you're not ready for the next level?",
-  "Want to lead with confidence but feel like you're missing the executive presence others seem to have naturally?"
+const innerThoughts = [
+  "Why don't they see my value?",
+  "Do I even belong in this room?",
+  "Am I really ready for this level?"
 ];
 
 export const Services = () => {
   return (
-    <section className="py-24 hero-section">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        {/* Challenge Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            If You're a Tech Leader Who Feels Stuck Despite Your Brilliance, This Message Is For You
-          </h2>
-          <p className="text-xl text-[var(--text-color)] max-w-4xl mx-auto mb-8">
-            You're brilliant. Your technical skills are undeniable. But somehow, you're still stuck watching others advance while you wonder what you're missing. Sound familiar?
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-4 text-left">
-              {challenges.map((challenge, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 glass-card rounded-lg">
-                  <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-[var(--text-color)]">{challenge}</span>
-                </div>
-              ))}
+        {/* Problem Section - Visual Storytelling */}
+        <div className="max-w-7xl mx-auto mb-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Powerful Headline */}
+            <div className="space-y-8">
+              <h2 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+                You're a brilliant tech leader with one problem:
+              </h2>
+              <h3 className="text-5xl md:text-6xl font-bold leading-tight gradient-text">
+                No one else can see it.
+              </h3>
+
+              <div className="space-y-6 text-lg text-gray-700">
+                <p>
+                  You're technically sharp. You deliver results. But when it comes to <strong>executive presence</strong>, you feel invisible.
+                </p>
+                <p>
+                  You know you're capable, but in high-stakes meetings, you hesitate. Your ideas get overlooked. Others with less expertise command the room.
+                </p>
+                <p>
+                  The truth is, <strong>it's not a skill problem</strong>—it's a <em>visibility and confidence problem</em>.
+                </p>
+                <p>
+                  Showing up with authentic leadership presence is hard. Articulating your value without sounding arrogant feels impossible.
+                </p>
+                <p>
+                  For many, it's <strong>imposter syndrome</strong> whispering you're not ready.
+                </p>
+                <p>
+                  For others, it's simply not knowing <strong>how</strong> to build the clarity and presence that opens doors.
+                </p>
+                <p className="text-xl font-semibold text-gray-900 pt-4">
+                  You need an experienced guide to help you step into the leader you already are.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="mt-8 p-6 glass-card rounded-xl max-w-4xl mx-auto">
-            <p className="text-xl text-[var(--text-color)] font-semibold">
-              If you nodded "yes" to any of these, you're not alone. And more importantly, <span className="gradient-text">you're exactly where I can help.</span>
-            </p>
+
+            {/* Right: Professional Image */}
+            <div className="relative">
+              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl max-w-[1000px] max-h-[1000px]">
+                <img
+                  src="/lovable-uploads/confused_client.jpg"
+                  alt="Professional tech leader feeling stuck and confused"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* 4P Program Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text section-divider relative pb-6">
-            The 4P Leadership Compass: Your Blueprint to Executive Success
-          </h2>
-          <p className="text-xl text-[var(--text-color)] max-w-3xl mx-auto mb-8">
-            Stop leaving your career to chance. In just 3 months, you'll master the four pillars that separate good managers from executive leaders who get promoted, respected, and rewarded.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in-up mb-16">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="glass-card hover-lift border-0 relative overflow-hidden group"
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 bg-[var(--primary-color)]/20 rounded-full w-16 h-16 flex items-center justify-center group-hover:bg-[var(--primary-color)] transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-[var(--primary-color)] group-hover:text-black transition-colors duration-300" />
-                </div>
-                <CardTitle className="text-xl font-bold text-[var(--text-color)] mb-2">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-[var(--text-color-secondary)] text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-[var(--text-color)]">
-                      <div className="w-2 h-2 bg-[var(--primary-color)] rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EFF6FF] py-20 px-6 rounded-3xl">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                The 4P Leadership Compass: <span className="gradient-text">Your Blueprint to Executive Success</span>
+              </h2>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Stop leaving your career to chance. In just <strong>3 months</strong>, you'll master the four pillars that separate good managers from executive leaders who get promoted, respected, and rewarded.
+              </p>
+            </div>
 
-        {/* Results Section */}
-        <div className="glass-card p-8 rounded-2xl text-center">
-          <h3 className="text-2xl font-bold gradient-text mb-6">The Transformation My Clients Experience</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="space-y-2">
-              <div className="text-3xl">⚡</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Lightning-Fast Decision Making</h4>
-              <p className="text-[var(--text-color-secondary)]">No more analysis paralysis - make confident choices that accelerate results</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              {services.map((service, index) => (
+                <Card
+                  key={index}
+                  className="bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <CardHeader className="text-center pb-4">
+                    <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl w-16 h-16 flex items-center justify-center">
+                      <service.icon className="w-8 h-8 text-[#3B82F6]" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-gray-700">
+                          <CheckCircle2 className="w-5 h-5 text-[#3B82F6] flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl">🎯</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Magnetic Executive Presence</h4>
-              <p className="text-[var(--text-color-secondary)]">Command respect and influence in every room you enter</p>
+
+            {/* Results Promise */}
+            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="text-3xl font-bold text-center mb-8 text-gray-900">
+                The Transformation You'll Experience
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center space-y-3">
+                  <div className="text-5xl">⚡</div>
+                  <h4 className="font-bold text-xl text-gray-900">Lightning-Fast Decisions</h4>
+                  <p className="text-gray-600">No more analysis paralysis—make confident choices that accelerate results</p>
+                </div>
+                <div className="text-center space-y-3">
+                  <div className="text-5xl">🎯</div>
+                  <h4 className="font-bold text-xl text-gray-900">Magnetic Presence</h4>
+                  <p className="text-gray-600">Command respect and influence in every room you enter</p>
+                </div>
+                <div className="text-center space-y-3">
+                  <div className="text-5xl">🚀</div>
+                  <h4 className="font-bold text-xl text-gray-900">Promotion-Ready</h4>
+                  <p className="text-gray-600">Strategic career advancement on your timeline, not theirs</p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                <p className="text-lg text-gray-900 text-center font-medium leading-relaxed">
+                  <strong>Imagine this:</strong> In just 90 days, you'll either be confidently leading the promotion conversation you've been putting off, or you'll possess the unwavering self-assurance to demand the recognition you deserve. <span className="gradient-text font-bold">This isn't just a promise; it's your guaranteed path to a new reality.</span>
+                </p>
+              </div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl">🚀</div>
-              <h4 className="font-semibold text-[var(--text-color)]">Promotion-Ready Positioning</h4>
-              <p className="text-[var(--text-color-secondary)]">Strategic career advancement on your timeline, not theirs</p>
-            </div>
-          </div>
-          <div className="mt-8 p-6 bg-gradient-to-r from-[var(--primary-color)]/10 to-[var(--primary-light)]/10 rounded-xl">
-            <p className="text-lg text-[var(--text-color)] font-medium">
-              <strong>Imagine this:</strong> In just 90 days, you'll either be confidently leading the promotion conversation you've been putting off, or you'll possess the unwavering self-assurance to demand the recognition you deserve. <em>This isn't just a promise; it's your guaranteed path to a new reality.</em>
-            </p>
           </div>
         </div>
       </div>
